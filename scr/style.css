@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100&family=Great+Vibes&family=IBM+Plex+Sans:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #F7F7F1;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#wedding-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    object-position: center 40%; /* Сдвигаем кадр выше */
+
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.play-btn:hover {
+    opacity: 1;
+}
+
+.names-container {
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.names-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1vw;
+    position: relative;
+    left: 7vw;
+    z-index: 1;
+}
+
+.name-regular {
+    font-family: 'Playfair Display', serif;
+    font-size: 15vw;
+    color: #000;
+    line-height: 1;
+}
+
+.name-and {
+    font-family: 'Playfair Display', serif;
+    font-size: 6vw;
+    color: #000;
+    line-height: 1;
+    align-self: center;
+}
+
+.name-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20vw;
+    color: #73AE3B;
+    position: relative;
+    top: 7vw; /* Опускаем ниже */
+    left: -14vw; /* Двигаем левее */
+}
+
+.scale-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 5vh;
+    transform-origin: center;
+    width: 100vw;
+}
+
+.invitation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    width: 65vw;
+    max-width: 1100px;
+    transform: scale(1); /* По умолчанию */
+    transform-origin: center;
+}
+
+/* Теперь фото и текст масштабируются вместе */
+.photo-container, .text-container {
+    flex: 1; /* Оба блока будут равномерно уменьшаться */
+}
+
+.photo-container {
+    position: relative;
+    width: 60%;
+    max-width: 1000px;
+    left: 11vw;
+    top: -10vw;
+    transform-origin: left;
+}
+
+.invitation-photo {
+    width: 100%;
+}
+
+.text-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    transform-origin: left;
+
+    margin-left: 16vw;
+    margin-bottom: 15vw;
+}
+
+
+.wedding-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: clamp(10px, 1.5vw, 23px);
+    letter-spacing: -1px;
+    color: #000;
+    line-height: 110%;
+}
+
+.wedding-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 10vw;
+    margin-left: -1vw; /* Двигаем вправо */
+    color: #000;
+    margin-top: 10px;
+}
+
+@media (max-width: 460px) {
+    .text-container {
+        margin-left: 8vw;
+    }
+
+    .wedding-text {
+        font-size: 9px;
+
+    }
+
+}
+
+
+
+
