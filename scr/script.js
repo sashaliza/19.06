@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     video.muted = true;
     video.volume = 0;
 
+    // Включаем бесконечный цикл воспроизведения
+    video.loop = true;
+
     playButton.addEventListener("click", () => {
         if (video.paused) {
             video.play();
