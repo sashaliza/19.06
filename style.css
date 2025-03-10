@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100&family=Great+Vibes&family=IBM+Plex+Sans:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #F7F7F1;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Самое начало, видео */
+
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#wedding-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    object-position: center 40%;
+
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: clamp(40px, 8vw, 80px);
+    height: clamp(40px, 8vw, 80px);
+
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+
+.play-btn:hover {
+    opacity: 1;
+}
+
+/* Наши имена */
+
+.names-container {
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.names-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1vw;
+    position: relative;
+    left: 7vw;
+    z-index: 1;
+}
+
+.name-regular {
+    font-family: 'Playfair Display', serif;
+    font-size: 15vw;
+    color: #000;
+    line-height: 1;
+}
+
+.name-and {
+    font-family: 'Playfair Display', serif;
+    font-size: 6vw;
+    color: #000;
+    line-height: 1;
+    align-self: center;
+}
+
+.name-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20vw;
+    color: #73AE3B;
+    position: relative;
+    top: 7vw;
+    left: -14vw;
+}
+
+/* Общая информация */
+
+.scale-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 5vh;
+    transform-origin: center;
+    width: 100vw;
+}
+
+.invitation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    width: 65vw;
+    max-width: 1100px;
+    transform: scale(1);
+    transform-origin: center;
+}
+
+.photo-container, .text-container {
+    flex: 1;
+}
+
+.photo-container {
+    position: relative;
+    width: 60%;
+    max-width: 1600px;
+    left: 5.5vw;
+    top: -9vw;
+    transform-origin: left;
+}
+
+.invitation-photo {
+    width: 130%;
+}
+
+.text-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    transform-origin: left;
+
+    margin-left: 16vw;
+    margin-bottom: 22vw;
+}
+
+
+.wedding-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: clamp(8px, 1.5vw, 23px);
+    color: #000;
+    line-height: 110%;
+}
+
+.wedding-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 10vw;
+    margin-left: -1vw;
+    color: #000;
+    margin-top: 10px;
+}
+
+@media (max-width: 460px) {
+    .text-container {
+        margin-left: 8vw;
+    }
+
+    .wedding-text {
+        font-size: 7px;
+    }
+
+    .invitation-photo {
+        width: 100%;
+    }
+    .schedule-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 35vw;
+    padding-right: 0;
+    position: relative;
+    top: clamp(-230px, -10vw, -70px) !important;
+}
+
+}
+
+/* Расписание */
+
+.schedule-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 35vw;
+    padding-right: 0;
+    position: relative;
+    top: clamp(-230px, -15vw, -50px) !important;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3vw;
+    max-width: 50vw;
+}
+
+.time-event {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    width: 100%;
+    min-height: 8vw;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.time {
+    font-family: 'Playfair Display', serif;
+    font-size: 9vw;
+    color: #000;
+}
+
+.underline {
+    margin-top: -3vw;
+    width: 90%;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 5vw;
+}
+
+.event-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2vw;
+    color: #000;
+    font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 0;
+    letter-spacing: -1px;
+}
+
+.marker-container {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.marker {
+    height: 1em;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Дресс-код */
+
+.dresscode-container {
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dresscode-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1vw;
+    position: relative;
+    left: 5vw;
+    z-index: 1;
+    top: clamp(-240px, -10vw, -40px) !important;
+}
+
+.dresscode-regular {
+    font-family: 'Playfair Display', serif;
+    font-size: 15vw;
+    color: #000;
+    line-height: 1;
+}
+
+.dresscode-and {
+    font-family: 'Playfair Display', serif;
+    font-size: 6vw;
+    color: #000;
+    line-height: 1;
+    align-self: center;
+    font-weight: bold;
+}
+
+.dresscode-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20vw;
+    color: #73AE3B;
+    position: relative;
+    top: 5vw;
+    left: -5vw;
+}
