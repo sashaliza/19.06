@@ -48,7 +48,7 @@ html, body {
     height: 900px;
     border: none;
     border-radius: 15px; /* Теперь закругление внутри тоже есть */
-    margin-top: -150px;
+    margin-top: -100px;
     margin-bottom: -100px;
     overflow: hidden;
 }
