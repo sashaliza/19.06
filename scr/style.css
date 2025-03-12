@@ -6,6 +6,19 @@
     box-sizing: border-box;
 }
 
+.full-width {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px; /* Ограничение ширины формы */
+    margin: 20px auto; /* Центрирование формы */
+    text-align: center;
+}
+
 html, body {
     width: 100vw;
     height: 100vh;
@@ -13,6 +26,33 @@ html, body {
     overflow-y: auto;
     background-color: #F7F7F1;
 }
+
+.form-wrapper {
+    width: clamp(75%, 85vw, 95%);
+    max-width: 1800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    border-top: 20px solid #f0f4f8; /* Вернули верхнюю границу */
+    border-bottom: 20px solid #f0f4f8; /* Вернули верхнюю границу */
+}
+
+/* Оформление формы внутри */
+.form-wrapper iframe {
+    background-color: white;
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: 15px; /* Теперь закругление внутри тоже есть */
+    margin-top: -150px;
+    margin-bottom: -100px;
+    overflow: hidden;
+}
+
 
 body::-webkit-scrollbar {
     display: none;
@@ -138,7 +178,7 @@ body::-webkit-scrollbar {
 .photo-container {
     position: relative;
     width: 60%;
-    max-width: 16600px;
+    max-width: 1600px;
     left: 5.5vw;
     top: -9vw;
     transform-origin: left;
@@ -183,8 +223,21 @@ body::-webkit-scrollbar {
     }
 
     .wedding-text {
-        font-size: 9px;
+        font-size: 7px;
     }
+
+    .invitation-photo {
+        width: 100%;
+    }
+    .schedule-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 35vw;
+    padding-right: 0;
+    position: relative;
+    top: clamp(-230px, -10vw, -70px) !important;
+}
 
 }
 
@@ -197,7 +250,7 @@ body::-webkit-scrollbar {
     padding-left: 35vw;
     padding-right: 0;
     position: relative;
-    top: clamp(-230px, -10vw, -70px) !important;
+    top: clamp(-230px, -15vw, -50px) !important;
 }
 
 .schedule {
